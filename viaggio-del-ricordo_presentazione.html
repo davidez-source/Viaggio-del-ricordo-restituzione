@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Il Nostro Viaggio del Ricordo — Presentazione</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;overflow:hidden;background:#1a2744}
+:root{--navy:#1a2744;--navy-mid:#243459;--cream:#f4ede0;--cream-dark:#e8dcc8;--crimson:#8b1a1a;--gold:#c9a84c;--gold-lt:#e3c878;
+--display:'Cormorant Garamond',Georgia,serif;--body:'Lora',Georgia,serif;--ui:'Josefin Sans',sans-serif}
+body{font-family:var(--body);color:var(--cream);-webkit-font-smoothing:antialiased}
+.deck{position:relative;width:100%;height:100%}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:6vh 8vw;opacity:0;visibility:hidden;transform:translateX(30px);transition:opacity .5s ease,transform .5s ease,visibility .5s;background:var(--navy)}
+.slide.active{opacity:1;visibility:visible;transform:none}
+.slide.light{background:var(--cream);color:#1a1a1a}
+.slide.mid{background:var(--navy-mid)}
+.label{font-family:var(--ui);font-size:clamp(.7rem,1.2vw,.85rem);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 1.2vh}
+.light .label{color:var(--crimson)}
+h1,h2{font-family:var(--display);font-weight:300;line-height:1.1;margin:0 0 2.5vh;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,9vw,7rem)}
+h2{font-size:clamp(2.2rem,5vw,3.8rem)}
+em{font-style:italic;color:var(--gold)}
+.light em{color:var(--crimson)}
+.rule{width:70px;height:2px;background:var(--gold);margin:0 0 3vh}
+.center{text-align:center;align-items:center}
+.center .rule{margin-left:auto;margin-right:auto}
+p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:62ch}
+.sub{font-family:var(--display);font-size:clamp(1.3rem,2.8vw,2rem);color:var(--cream-dark);font-style:italic}
+.meta{display:flex;gap:4vw;flex-wrap:wrap;margin-top:4vh;font-family:var(--ui);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,237,224,.6)}
+.meta strong{display:block;font-family:var(--body);font-size:1.3rem;letter-spacing:0;text-transform:none;color:var(--cream);font-weight:500}
+/* percorso */
+.route{display:grid;grid-template-columns:repeat(4,1fr);gap:2vh 1.6vw;margin-top:2vh}
+.stop{border-top:2px solid var(--gold);padding-top:1.2vh}
+.stop b{font-family:var(--ui);color:var(--gold);font-size:.85rem;letter-spacing:.2em;font-weight:400}
+.stop h3{font-family:var(--display);font-size:clamp(1.2rem,2.3vw,1.7rem);font-weight:600;margin:.3vh 0}
+.stop span{font-size:clamp(.8rem,1.3vw,1rem);color:rgba(244,237,224,.7);line-height:1.4;display:block}
+/* foto */
+.photos{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2vw;margin-top:2vh}
+.photos figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:var(--navy-mid);position:relative}
+.photos img{width:100%;height:100%;object-fit:cover;display:block}
+.photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:.6vh .8vw;font-family:var(--ui);font-size:.7rem;letter-spacing:.1em;background:linear-gradient(transparent,rgba(26,39,68,.9))}
+/* citazioni / colonne */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:4vw;margin-top:2vh}
+.card{padding:3vh 2.5vw;border-radius:10px;background:#fff;box-shadow:0 8px 32px rgba(26,39,68,.14);border-top:4px solid var(--crimson)}
+.card.navy{border-top-color:var(--gold)}
+.card h3{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:600;color:var(--navy);margin:0 0 1vh}
+.card p{font-size:clamp(.95rem,1.6vw,1.2rem);color:#3c3a38;margin:0}
+.quote{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.3;max-width:24em;margin:0}
+.quote::before{content:'“';color:var(--gold);font-size:1.4em;line-height:0;vertical-align:-.3em;margin-right:.1em}
+/* prodotti */
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center;margin-top:2vh}
+.btn{display:inline-flex;align-items:center;gap:.8em;margin-top:1.5vh;padding:1.2vh 1.6vw;border:1px solid var(--gold);border-radius:8px;color:var(--gold-lt);text-decoration:none;font-family:var(--ui);letter-spacing:.12em;font-size:.85rem}
+.light .btn{color:var(--crimson);border-color:var(--crimson)}
+.light .btn:hover{background:rgba(139,26,26,.08)}
+.btn:hover{background:rgba(201,168,76,.15)}
+.news{border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4);max-height:52vh;background:var(--navy-mid)}
+.news img{width:100%;max-height:52vh;object-fit:contain;display:block}
+/* controlli */
+.bar{position:fixed;left:0;top:0;height:3px;background:var(--gold);width:0;transition:width .4s;z-index:10}
+.nav{position:fixed;bottom:2.5vh;right:3vw;display:flex;gap:10px;align-items:center;z-index:10;font-family:var(--ui);font-size:.8rem;letter-spacing:.15em;color:var(--gold)}
+.nav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:rgba(26,39,68,.7);color:var(--gold);font-size:1.1rem;cursor:pointer}
+.nav button:hover{background:var(--gold);color:var(--navy)}
+@media(max-width:800px){
+ .slide{padding:5vh 6vw 10vh;overflow-y:auto;justify-content:flex-start}
+ .route,.photos{grid-template-columns:1fr 1fr}.cols,.prod{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<main class="deck" id="deck">
+
+<!-- 1 TITOLO -->
+<section class="slide active">
+  <p class="label">Classe 3E · Liceo Classico Jacopo Stellini · 2025/26</p>
+  <h1>Il Nostro<br><em>Viaggio del Ricordo</em></h1>
+  <p class="sub">Cosa abbiamo visto, cosa abbiamo sentito, cosa ci portiamo a casa</p>
+  <div class="rule"></div>
+  <div class="meta">
+    <div><strong>Mestre → Zara</strong>itinerario</div>
+    <div><strong>8 tappe</strong>luoghi visitati</div>
+    <div><strong>10 Febbraio</strong>Giorno del Ricordo</div>
+  </div>
+</section>
+
+<!-- 2 PERCHÉ -->
+<section class="slide mid">
+  <p class="label">Il punto di partenza</p>
+  <h2>Non solo pagine<br><em>di un libro</em></h2>
+  <div class="rule"></div>
+  <p>Per decenni la storia dell’esodo giuliano dalmata è rimasta nell’ombra. Noi l’avevamo incontrata sui banchi, tra date e definizioni.</p>
+  <p>Questo viaggio è stato l’occasione per uscire dai libri e <em>vedere con i nostri occhi</em> i luoghi che hanno segnato la vita di moltissime persone.</p>
+</section>
+
+<!-- 3 PERCORSO -->
+<section class="slide">
+  <p class="label">Il percorso</p>
+  <h2>Otto tappe, <em>un solo filo</em></h2>
+  <div class="rule"></div>
+  <div class="route">
+    <div class="stop"><b>01 · MESTRE</b><h3>Museo M9</h3><span>Il Novecento come cornice</span></div>
+    <div class="stop"><b>02 · PADRICIANO</b><h3>Centro profughi</h3><span>Dove gli esuli attesero</span></div>
+    <div class="stop"><b>03 · BASOVIZZA</b><h3>La Foiba</h3><span>Il silenzio del monumento</span></div>
+    <div class="stop"><b>04 · TRIESTE</b><h3>Magazzino 26</h3><span>Le cose lasciate indietro</span></div>
+    <div class="stop"><b>05 · FIUME</b><h3>Comunità Italiana</h3><span>Una lingua che resiste</span></div>
+    <div class="stop"><b>06 · FIUME</b><h3>Teatro Italiano</h3><span>Cultura ancora viva</span></div>
+    <div class="stop"><b>07 · ZARA</b><h3>La città simbolo</h3><span>Il cuore del progetto</span></div>
+    <div class="stop"><b>08 · ZARA</b><h3>Visita guidata</h3><span>Tracce veneziane e italiane</span></div>
+  </div>
+  <a class="btn" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:3vh">🗺️ VEDI L’ITINERARIO SULLA MAPPA →</a>
+</section>
+
+<!-- 3b MYMAPS -->
+<section class="slide light">
+  <p class="label">Il progetto Google My Maps</p>
+  <h2>Il viaggio, <em>sulla mappa</em></h2>
+  <div class="rule"></div>
+  <p style="color:#3c3a38">Abbiamo trasformato l’itinerario in una <strong>mappa interattiva</strong>: ogni tappa, da Mestre a Zara, è un punto da esplorare, per seguire il percorso passo dopo passo.</p>
+  <a class="btn mapbtn" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener">🗺️ APRI L’ITINERARIO SU GOOGLE MY MAPS →</a>
+</section>
+
+<!-- 4 FOTO -->
+<section class="slide mid">
+  <p class="label">Dal nostro album</p>
+  <h2>Il viaggio, <em>attraverso i nostri occhi</em></h2>
+  <div class="photos">
+    <figure><img src="mestre_M9.jpeg" alt="Gruppo al museo M9" onerror="this.remove()"><figcaption>Mestre · M9</figcaption></figure>
+    <figure><img src="padriciano_esterno.jpg" alt="Padriciano esterno" onerror="this.remove()"><figcaption>Padriciano</figcaption></figure>
+    <figure><img src="padriciano_interno.jpg" alt="Padriciano interno" onerror="this.remove()"><figcaption>Padriciano · interno</figcaption></figure>
+    <figure><img src="fiume_teatro.jpeg" alt="Teatro di Fiume" onerror="this.remove()"><figcaption>Fiume · Teatro</figcaption></figure>
+    <figure><img src="fiume_centro.jpg" alt="Centro di Fiume" onerror="this.remove()"><figcaption>Fiume · centro</figcaption></figure>
+    <figure><img src="zara_foro.jpg" alt="Foro di Zara" onerror="this.remove()"><figcaption>Zara · Foro</figcaption></figure>
+    <figure><img src="zara_gruppochiesa.jpg" alt="Gruppo a Zara" onerror="this.remove()"><figcaption>Zara · chiesa</figcaption></figure>
+    <figure><img src="zara_gruppofinale.jpeg" alt="Foto finale a Zara" onerror="this.remove()"><figcaption>Zara · foto finale</figcaption></figure>
+  </div>
+</section>
+
+<!-- 5 BASOVIZZA -->
+<section class="slide">
+  <p class="label">Il momento che ci ha colpito di più</p>
+  <p class="quote">Il silenzio di quel luogo e l’improvviso innalzarsi del monumento ci hanno emozionato.</p>
+  <div class="rule" style="margin-top:4vh"></div>
+  <p class="sub" style="max-width:40em">Foiba di Basovizza — tra boschi, valli e colline.</p>
+</section>
+
+<!-- 6 ZARA -->
+<section class="slide mid">
+  <p class="label">Zara</p>
+  <h2>Camminare dove<br><em>la storia si legge nei muri</em></h2>
+  <div class="rule"></div>
+  <p>Con la guida e poi in autonomia abbiamo percorso le strade di Zara, che portano ancora i segni del passato veneziano nell’architettura.</p>
+  <p>Una città oggi vivace e croata, dove il passato italiano non è scomparso: si riconosce, se si sa dove guardare.</p>
+</section>
+
+<!-- 7 APPRESO -->
+<section class="slide light">
+  <p class="label">Cosa ci portiamo a casa</p>
+  <h2>Ciò che <em>abbiamo imparato</em></h2>
+  <div class="cols">
+    <div class="card"><h3>Il confine</h3><p>È stato il filo conduttore del viaggio: un confine geografico, ma anche linguistico e identitario.</p></div>
+    <div class="card navy"><h3>La memoria</h3><p>Non riguarda solo il passato. Le comunità degli esuli mantengono viva una cultura, una lingua, un’identità che rischiava di essere dimenticata.</p></div>
+  </div>
+  <p style="margin-top:3vh;color:#3c3a38">Comprendere la loro storia ci aiuta a capire meglio l’Europa di oggi.</p>
+</section>
+
+<!-- 8 PRODOTTI -->
+<section class="slide mid">
+  <p class="label">La restituzione</p>
+  <h2>Il viaggio <em>continua</em> nei nostri lavori</h2>
+  <div class="prod">
+    <div>
+      <p><strong>🎙️ Il podcast</strong><br>Realizzato per la radio della scuola: un viaggio sonoro tra i luoghi dell’Adriatico orientale, tra storia, memoria e identità.</p>
+      <a class="btn" href="https://open.spotify.com/episode/48pebVp7RInbHYrBwZTeBV?si=kZjmSsNEQbW-smgnMIzItw" target="_blank" rel="noopener">🎧 ASCOLTA SU SPOTIFY</a>
+      <p style="margin-top:3vh"><strong>📰 L’articolo</strong><br>A Fiume siamo finiti sulle pagine de <em>La Voce del Popolo</em>, dopo l’incontro con la Comunità degli Italiani.</p>
+    </div>
+    <div class="news"><img src="vocedelpopolo_primopiano.png" alt="Articolo La Voce del Popolo" onerror="this.parentNode.remove()"></div>
+  </div>
+</section>
+
+<!-- 9 GRAZIE -->
+<section class="slide center">
+  <p class="label">Grazie</p>
+  <h1><em>Ricordare</em><br>per non dimenticare</h1>
+  <div class="rule"></div>
+  <p class="sub">Con gratitudine a tutti coloro che hanno condiviso la propria memoria</p>
+  <p style="margin-top:4vh;font-size:clamp(.85rem,1.4vw,1.05rem);color:rgba(244,237,224,.65)">Classe 3E · coordinata dalla prof.ssa Ada Barbara Pierotti<br>con il contributo della prof.ssa Anna Passerelli</p>
+</section>
+</main>
+
+<div class="nav"><button id="prev" aria-label="Indietro">←</button><span id="count"></span><button id="next" aria-label="Avanti">→</button></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));
+ slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+ document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+ document.getElementById('count').textContent=(i+1)+' / '+slides.length;
+ history.replaceState(null,'','#'+(i+1));}
+document.getElementById('next').onclick=()=>go(i+1);
+document.getElementById('prev').onclick=()=>go(i-1);
+document.addEventListener('keydown',e=>{
+ if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(i+1)}
+ if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1)}
+ if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1);
+ if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();});
+let x0=null;
+document.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(i+(d<0?1:-1));x0=null});
+go(parseInt(location.hash.slice(1))-1||0);
+</script>
+</body>
+</html>
