@@ -59,6 +59,34 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
 .btn:hover{background:rgba(201,168,76,.15)}
 .news{border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.4);max-height:52vh;background:var(--navy-mid)}
 .news img{width:100%;max-height:52vh;object-fit:contain;display:block}
+/* storia */
+.stats{display:flex;gap:4vw;margin:1vh 0 3vh}
+.stats div{font-family:var(--display);font-size:clamp(2.4rem,5.5vw,4.2rem);color:var(--gold);line-height:1}
+.stats span{display:block;font-family:var(--ui);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,237,224,.65);margin-top:.8vh}
+.era{display:grid;grid-template-columns:1.5fr 1fr;gap:3.5vw;align-items:start;margin-top:1vh}
+.era.full{grid-template-columns:1fr}
+.tl{list-style:none;margin:0;padding:0 0 0 1.6vw;border-left:2px solid var(--gold)}
+.tl li{position:relative;margin:0 0 1.6vh}
+.tl li::before{content:'';position:absolute;left:calc(-1.6vw - 6px);top:.55em;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.tl b{display:block;font-family:var(--ui);font-weight:600;font-size:clamp(.72rem,1.2vw,.88rem);letter-spacing:.15em;color:var(--gold)}
+.tl span{font-size:clamp(.82rem,1.45vw,1.08rem);line-height:1.5;display:block;max-width:60ch}
+.tl strong{font-family:var(--display);font-size:1.15em;font-weight:600}
+.pics{display:grid;gap:1.2vh}
+.pics figure{margin:0;border-radius:8px;overflow:hidden;background:var(--navy-mid);position:relative}
+.pics img{width:100%;max-height:30vh;object-fit:cover;display:block}
+.light .pics figcaption{color:#555}
+.light .tl b{color:var(--crimson)}
+.light .tl::before{}
+.light .tl{border-left-color:var(--crimson)}
+.light .tl li::before{background:var(--crimson)}
+.light .chips span{border-color:var(--crimson);color:var(--crimson)}
+.light .chips span.on{background:var(--crimson);color:var(--cream)}
+.pics figcaption{padding:.6vh .8vw;font-size:.72rem;font-family:var(--ui);letter-spacing:.08em;color:rgba(244,237,224,.75)}
+.chips{display:flex;gap:.8vw;flex-wrap:wrap;margin-top:2vh}
+.chips span{padding:.8vh 1.2vw;border:1px solid var(--gold);border-radius:30px;font-family:var(--ui);font-size:clamp(.7rem,1.2vw,.85rem);letter-spacing:.1em;color:var(--gold-lt)}
+.chips span.on{background:var(--gold);color:var(--navy)}
+.bigq{font-family:var(--display);font-style:italic;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--gold-lt);border-left:3px solid var(--gold);padding-left:1.4vw;margin:1.5vh 0 0;max-width:46ch}
+.bigq small{display:block;font-family:var(--ui);font-style:normal;font-size:.7rem;letter-spacing:.12em;color:rgba(244,237,224,.6);margin-top:.6vh}
 /* controlli */
 .bar{position:fixed;left:0;top:0;height:3px;background:var(--gold);width:0;transition:width .4s;z-index:10}
 .nav{position:fixed;bottom:2.5vh;right:3vw;display:flex;gap:10px;align-items:center;z-index:10;font-family:var(--ui);font-size:.8rem;letter-spacing:.15em;color:var(--gold)}
@@ -66,7 +94,7 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
 .nav button:hover{background:var(--gold);color:var(--navy)}
 @media(max-width:800px){
  .slide{padding:5vh 6vw 10vh;overflow-y:auto;justify-content:flex-start}
- .route,.photos{grid-template-columns:1fr 1fr}.cols,.prod{grid-template-columns:1fr}
+ .route,.photos{grid-template-columns:1fr 1fr}.cols,.prod,.era{grid-template-columns:1fr}.stats{gap:6vw}
 }
 </style>
 </head>
@@ -94,6 +122,60 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
   <div class="rule"></div>
   <p>Per decenni la storia dell’esodo giuliano dalmata è rimasta nell’ombra. Noi l’avevamo incontrata sui banchi, tra date e definizioni.</p>
   <p>Questo viaggio è stato l’occasione per uscire dai libri e <em>vedere con i nostri occhi</em> i luoghi che hanno segnato la vita di moltissime persone.</p>
+</section>
+
+<!-- STORIA: ESODO -->
+<section class="slide">
+  <p class="label">Il contesto storico</p>
+  <h2>L’esodo <em>giuliano dalmata</em></h2>
+  <div class="stats"><div>~350.000<span>esuli</span></div><div>1943–’64<span>gli anni dell’esodo</span></div><div>10 Feb<span>Giorno del Ricordo</span></div></div>
+  <div class="era" style="margin-top:0"><div>
+    <p>Dopo la Seconda guerra mondiale il <strong>Trattato di Parigi (1947)</strong> e il <strong>Memorandum di Londra (1954)</strong> assegnarono Istria e Dalmazia alla Jugoslavia di Tito. Lì vivevano da secoli comunità italiane: restare, spesso tra paura e discriminazione, o partire.</p>
+    <p>Tra il 1943 e il 1945 si consumò anche la tragedia delle <strong>foibe</strong>. Dal 2004, con la legge n. 92, il 10 febbraio è il Giorno del Ricordo.</p>
+  </div><div class="pics"><figure><img src="Toscana_pola.jpg" alt="La nave Toscana lascia Pola (1947)" onerror="this.parentNode.remove()"><figcaption>La nave Toscana lascia Pola (1947)</figcaption></figure><figure><img src="sansabba_campo-profughi.jpg" alt="Centro profughi di San Sabba (1950)" onerror="this.parentNode.remove()"><figcaption>Centro profughi di San Sabba (1950)</figcaption></figure></div></div>
+</section>
+
+<!-- ZARA 0 -->
+<section class="slide mid">
+  <p class="label">Approfondimento storico</p>
+  <h2>La storia di <em>Zara</em></h2>
+  <div class="rule"></div>
+  <p>Zara, oggi <strong>Zadar</strong> in Croazia, fu capoluogo della Dalmazia per quasi un millennio: una città di frontiera plasmata da dominazioni diverse, un vero crocevia di civiltà. La sua storia è inseparabile dall’esodo giuliano dalmata.</p>
+  <p>La ripercorriamo in cinque grandi periodi.</p>
+  <div class="chips" style="gap:1.2vw;margin-top:3vh">
+    <span>I · Le origini</span><span>II · Zara veneziana</span><span>III · Zara asburgica</span><span>IV · Zara italiana</span><span>V · Guerra e dopoguerra</span>
+  </div>
+</section>
+
+<section class="slide light">
+  <p class="label">I · IX sec. a.C. – 1107</p>
+  <h2>Le <em>origini</em></h2>
+  <div class="chips"><span class="on">IX sec. a.C. – 1107</span><span class="">1107 – 1797</span><span class="">1797 – 1918</span><span class="">1918 – 1943</span><span class="">1943 – 1975</span></div>
+  <div class="era" style="margin-top:2.5vh"><ul class="tl"><li><b>IX SEC. A.C.</b><span>I <strong>Liburni</strong>, abili navigatori illirici, fondano un avamposto su un’isoletta unita alla terraferma da un istmo. I Greci lo chiamano <strong>Idassa</strong>.</span></li><li><b>59 A.C.</b><span><strong>Iadera</strong> diventa municipio romano; con Augusto arrivano mura, acquedotti, il Foro, anfiteatro e terme.</span></li><li><b>476 – IX SEC.</b><span>Capitale della Dalmazia bizantina. Nell’811 la chiesa di <strong>San Donato</strong>, oggi il monumento bizantino meglio conservato della Croazia.</span></li><li><b>1105</b><span>Zara è libero Comune sotto protezione ungaro-croata: inizia la lunga contesa con Venezia.</span></li><li><b>1202</b><span>La <strong>Quarta Crociata</strong> assedia Zara per conto di Venezia, nonostante il divieto del papa.</span></li></ul><div class="pics"><figure><img src="zara_foro.jpg" alt="Il Foro romano di Zara (foto del viaggio)" onerror="this.parentNode.remove()"><figcaption>Il Foro romano di Zara (foto del viaggio)</figcaption></figure></div></div>
+</section>
+<section class="slide mid">
+  <p class="label">II · 1107 – 1797</p>
+  <h2>Zara <em>veneziana</em></h2>
+  <div class="chips"><span class="">IX sec. a.C. – 1107</span><span class="on">1107 – 1797</span><span class="">1797 – 1918</span><span class="">1918 – 1943</span><span class="">1943 – 1975</span></div>
+  <div class="era full" style="margin-top:2.5vh"><ul class="tl"><li><b>1107</b><span>La città è stretta tra le pressioni del regno d’Ungheria e le mire marittime di Venezia.</span></li><li><b>1345 – 1346</b><span>Il grande assedio: Zara si ribella al dominio veneziano, ma Venezia la riconquista.</span></li><li><b>1409</b><span>Ladislao di Napoli cede Zara e la Dalmazia a Venezia per 100.000 ducati: inizia una lunga stagione di prosperità.</span></li><li><b>XV – XVIII SEC.</b><span>Calli, campielli, porte monumentali con il <strong>leone di San Marco</strong>: la città parla la lingua della Serenissima.</span></li><li><b>1797</b><span>Con il Trattato di Campoformio Napoleone cede i territori veneziani all’Austria.</span></li></ul></div><div class="chips"><span>Commercio · nodo delle rotte adriatiche</span><span>Porto naturale protetto</span><span>Leoni marciani e palazzi sul mare</span></div>
+</section>
+<section class="slide light">
+  <p class="label">III · 1797 – 1918</p>
+  <h2>Zara <em>asburgica</em></h2>
+  <div class="chips"><span class="">IX sec. a.C. – 1107</span><span class="">1107 – 1797</span><span class="on">1797 – 1918</span><span class="">1918 – 1943</span><span class="">1943 – 1975</span></div>
+  <div class="era full" style="margin-top:2.5vh"><ul class="tl"><li><b>1797 – 1815</b><span>Dall’Austria alle Province Illiriche napoleoniche, poi di nuovo all’Austria: Zara è capoluogo del <strong>Regno di Dalmazia</strong>.</span></li><li><b>1848 – 1861</b><span>Le rivoluzioni scuotono l’Impero. Con il <strong>Parlamento dalmata</strong> la città diventa il palcoscenico dello scontro tra autonomisti italiani e nazionali croati.</span></li><li><b>1880 – 1918</b><span>Nuovi edifici pubblici, infrastrutture portuali, vita culturale vivace. Nel 1918 il crollo dell’Impero apre la città alle rivendicazioni italiane e jugoslave.</span></li></ul></div>
+</section>
+<section class="slide mid">
+  <p class="label">IV · 1918 – 1943</p>
+  <h2>Zara <em>italiana</em></h2>
+  <div class="chips"><span class="">IX sec. a.C. – 1107</span><span class="">1107 – 1797</span><span class="">1797 – 1918</span><span class="on">1918 – 1943</span><span class="">1943 – 1975</span></div>
+  <div class="era full" style="margin-top:2.5vh"><ul class="tl"><li><b>1915 – 1920</b><span>Il Patto di Londra promette Zara all’Italia; il <strong>Trattato di Rapallo (1920)</strong> la annette al Regno come enclave, circondata dal territorio jugoslavo.</span></li><li><b>13 LUGLIO 1920</b><span>Incendio del <strong>Narodni dom</strong>, centro culturale della comunità slava: un punto di rottura nella convivenza.</span></li><li><b>1920 – 1925</b><span>«Fascismo di confine»: violenza politica, italiano imposto in scuole e uffici, limiti alle associazioni slave. Molte famiglie slave se ne vanno: un primo esodo che anticipa quello degli anni Quaranta.</span></li></ul></div>
+</section>
+<section class="slide light">
+  <p class="label">V · 1943 – 1975</p>
+  <h2>Guerra e <em>dopoguerra</em></h2>
+  <div class="chips"><span class="">IX sec. a.C. – 1107</span><span class="">1107 – 1797</span><span class="">1797 – 1918</span><span class="">1918 – 1943</span><span class="on">1943 – 1975</span></div>
+  <div class="era" style="margin-top:2.5vh"><ul class="tl"><li><b>8 SETTEMBRE 1943</b><span>L’armistizio fa collassare l’ordine militare e amministrativo anche in Dalmazia.</span></li><li><b>NOV. 1943 – 1944</b><span>Oltre 50 incursioni aeree alleate: il centro storico veneziano è quasi interamente distrutto.</span></li><li><b>1944 – 1947</b><span>Con l’occupazione jugoslava circa <strong>20.000 italiani</strong> lasciano Zara, abbandonando case, averi e sepolture. Il 10 febbraio 1947 il Trattato di Parigi assegna la città alla Jugoslavia.</span></li><li><b>1954 – 1975</b><span>Il Memorandum di Londra divide il Territorio Libero di Trieste e provoca nuovi esodi dall’Istria; la questione dei confini si chiude con il <strong>Trattato di Osimo</strong> (1975).</span></li></ul><div class="pics"><figure><img src="zara_bombardata.jpg" alt="Zara dopo i bombardamenti (Riva Nuova)" onerror="this.parentNode.remove()"><figcaption>Zara dopo i bombardamenti (Riva Nuova)</figcaption></figure><figure><img src="zara_crisogono.jpg" alt="San Crisogono e il campanile del Duomo, colpiti dai bombardamenti" onerror="this.parentNode.remove()"><figcaption>San Crisogono e il campanile del Duomo, colpiti dai bombardamenti</figcaption></figure></div></div>
 </section>
 
 <!-- 3 PERCORSO -->
