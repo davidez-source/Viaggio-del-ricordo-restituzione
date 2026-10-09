@@ -161,7 +161,9 @@ p{font-size:clamp(1rem,min(2vw,3.2vh),1.6rem)}
 }
 
 /* --- layout foto --- */
-.pics img{max-height:none;aspect-ratio:2/1;height:auto;object-position:center 35%}
+.pics{gap:.8vh}
+.pics img{max-height:none;aspect-ratio:auto;height:23vh;width:100%;object-fit:cover;object-position:center 35%}
+.pics figcaption{padding:.5vh .8vw;font-size:clamp(.6rem,.95vw,.72rem)}
 .gal.esule{grid-template-columns:1fr 1fr}
 .gal.esule figure:first-child{grid-column:1;grid-row:span 2;aspect-ratio:auto}
 .gal.esule figure:first-child img{position:absolute;inset:0;object-position:center top}
