@@ -136,6 +136,12 @@ p{font-size:clamp(1rem,min(2vw,3.2vh),1.6rem)}
 .q{font-size:clamp(1.25rem,min(2.5vw,4vh),2.1rem);margin-bottom:1.6vh}
 .chips{margin-top:1vh}.chips span{padding:.5vh 1vw}
 .rule{margin-bottom:2vh}
+/* mappa: tessere OSM rese scure, layout a tutta altezza */
+.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.55)}
+#mappa{justify-content:flex-start}
+#mappa .mapwrap{flex:1;height:auto;min-height:0;margin-top:1.2vh}
+#mappa>p{margin:0 0 .5vh;font-size:clamp(.95rem,min(1.6vw,2.6vh),1.3rem)}
+#mappa h2{margin-bottom:.8vh}
 /* controlli */
 .bar{position:fixed;left:0;top:0;height:3px;background:var(--gold);width:0;transition:width .4s;z-index:10}
 .nav{position:fixed;bottom:2.5vh;right:3vw;display:flex;gap:10px;align-items:center;z-index:10;font-family:var(--ui);font-size:.8rem;letter-spacing:.15em;color:var(--gold)}
@@ -248,7 +254,7 @@ function initMap(){
  if(map){map.invalidateSize();return}
  if(typeof L==='undefined'){toggleMM(true);return}
  map=L.map('map',{keyboard:false,scrollWheelZoom:false}).setView([45.0,14.2],7);
- L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap · © CARTO',maxZoom:18}).addTo(map);
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);
  L.polyline(MD.route,{color:'#c9a84c',weight:3,opacity:.85,dashArray:'6 6'}).addTo(map);
  const pts=[];MD.stops.forEach(s=>{const sid=SID[s[0]],main=!!sid,c=DAYCOL[s[3]];
   const m=L.circleMarker([s[1],s[2]],{radius:main?10:6,color:'#1a2744',weight:2,fillColor:c,fillOpacity:1}).addTo(map);
