@@ -89,6 +89,53 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
 .slide.split{flex-direction:row;align-items:center;gap:4vw}
 .slide.split .left{flex:1.5}.slide.split .right{flex:1}
 .era{align-items:center}
+
+p{font-size:clamp(1.1rem,2.1vw,1.65rem)}
+h2{font-size:clamp(2.3rem,5vw,4rem)}
+.tl span{font-size:clamp(.95rem,1.7vw,1.3rem)}.tl b{font-size:clamp(.8rem,1.3vw,1rem)}
+.chips span{font-size:clamp(.8rem,1.3vw,1rem)}
+.split{flex-direction:row;align-items:center;gap:4vw}
+.split .left{flex:1.25}.split .right{flex:1}
+.luogo{font-family:var(--display);font-style:italic;font-size:clamp(1.15rem,2vw,1.55rem);color:var(--cream-dark);line-height:1.45;margin:0 0 2vh;max-width:44ch}
+.pts{list-style:none;margin:0 0 2.5vh;padding:0}
+.pts li{position:relative;padding-left:1.4em;margin:0 0 1.3vh;font-size:clamp(1.05rem,1.85vw,1.45rem);line-height:1.5;max-width:48ch}
+.pts li::before{content:'';position:absolute;left:0;top:.6em;width:.55em;height:.55em;border-radius:50%;background:var(--gold)}
+.light .pts li::before{background:var(--crimson)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:1vw}
+.gal figure{margin:0;border-radius:8px;overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--navy-mid)}
+.gal.n1,.gal.n2{grid-template-columns:1fr}.gal.n1 figure{aspect-ratio:3/2}.gal.n2 figure{aspect-ratio:16/10}
+.gal.n3 figure:first-child{grid-column:span 2;aspect-ratio:16/9}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4vh .9vw .6vh;font-family:var(--ui);font-size:clamp(.7rem,1.1vw,.9rem);letter-spacing:.08em;color:var(--cream);background:linear-gradient(transparent,rgba(26,39,68,.92))}
+.q{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,2.6vw,2.1rem);color:var(--gold-lt);border-left:3px solid var(--gold);padding-left:1.4vw;margin:0 0 2.5vh;max-width:30em;line-height:1.35}
+.btn{cursor:pointer;font-size:clamp(.8rem,1.2vw,.95rem)}
+.lbl{font-size:clamp(.8rem,1.2vw,.95rem)}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2vw;margin-top:2vh}
+.work .card h3{font-size:clamp(1.5rem,2.6vw,2.1rem)}.work .card p{font-size:clamp(1rem,1.65vw,1.3rem)}
+.work .card a{color:var(--crimson);font-family:var(--ui);letter-spacing:.1em;font-size:.85rem;display:inline-block;margin-top:1.5vh}
+/* mappa */
+.mapwrap{display:grid;grid-template-columns:1fr 2.1fr;gap:2.5vw;align-items:stretch;margin-top:1vh;height:62vh}
+.days{overflow:auto;padding-right:.5vw}
+.days h4{font-family:var(--ui);font-weight:600;letter-spacing:.2em;font-size:.8rem;margin:1.2vh 0 .6vh;color:var(--gold)}
+.days a{display:block;padding:.7vh .8vw;margin:0 0 .5vh;border-left:3px solid var(--gold);background:rgba(255,255,255,.05);border-radius:0 6px 6px 0;font-size:clamp(.95rem,1.5vw,1.2rem);cursor:pointer;color:var(--cream);text-decoration:none}
+.days a:hover{background:rgba(201,168,76,.2)}
+.days a.d2{border-color:#e07a5f}.days a.d3{border-color:#81b29a}
+.mapbox{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(201,168,76,.4);background:#0f1830}
+#map,#mm{position:absolute;inset:0;width:100%;height:100%;border:0}#mm{display:none}
+.mtog{position:absolute;right:10px;top:10px;z-index:1000;background:var(--navy);color:var(--gold-lt);border:1px solid var(--gold);border-radius:6px;padding:.6vh .9vw;font-family:var(--ui);font-size:.75rem;letter-spacing:.1em;cursor:pointer}
+.leaflet-popup-content-wrapper{background:var(--navy);color:var(--cream);font-family:var(--body)}.leaflet-popup-tip{background:var(--navy)}
+.leaflet-popup-content a{color:var(--gold-lt);cursor:pointer;font-family:var(--ui);font-size:.8rem;letter-spacing:.08em}
+@media(max-width:800px){.work,.mapwrap{grid-template-columns:1fr}.mapwrap{height:auto}.mapbox{height:50vh}.split{flex-direction:column;align-items:flex-start}}
+/* adattamento all'altezza dello schermo */
+h1{font-size:clamp(2.6rem,min(8vw,13vh),6.5rem)}
+h2{font-size:clamp(2rem,min(4.6vw,7.4vh),3.8rem);margin-bottom:1.6vh}
+p{font-size:clamp(1rem,min(2vw,3.2vh),1.6rem)}
+.tl span{font-size:clamp(.9rem,min(1.65vw,2.7vh),1.3rem);line-height:1.4}.tl li{margin-bottom:1.2vh}
+.pts li{font-size:clamp(1rem,min(1.8vw,2.9vh),1.45rem);line-height:1.42;margin-bottom:1vh}
+.luogo{font-size:clamp(1.05rem,min(1.9vw,3vh),1.5rem);margin-bottom:1.4vh}
+.q{font-size:clamp(1.25rem,min(2.5vw,4vh),2.1rem);margin-bottom:1.6vh}
+.chips{margin-top:1vh}.chips span{padding:.5vh 1vw}
+.rule{margin-bottom:2vh}
 /* controlli */
 .bar{position:fixed;left:0;top:0;height:3px;background:var(--gold);width:0;transition:width .4s;z-index:10}
 .nav{position:fixed;bottom:2.5vh;right:3vw;display:flex;gap:10px;align-items:center;z-index:10;font-family:var(--ui);font-size:.8rem;letter-spacing:.15em;color:var(--gold)}
@@ -99,48 +146,23 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
  .route,.photos{grid-template-columns:1fr 1fr}.cols,.prod,.era{grid-template-columns:1fr}.slide.split{flex-direction:column;align-items:flex-start}.stats{gap:6vw}
 }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
 <body>
 <div class="bar" id="bar"></div>
 <main class="deck" id="deck">
+<section class="slide split"><div class="left"><p class="label">Classe 3E · Liceo Classico Jacopo Stellini</p><h1>Il Nostro<br><em>Viaggio del Ricordo</em></h1><p class="sub">Da Mestre a Zara, sulle tracce dell’esodo giuliano dalmata</p><div class="rule"></div><div class="meta"><div><strong>23–25 marzo 2026</strong>il viaggio</div><div><strong>Mestre → Zara</strong>itinerario</div></div></div><div class="right gal n1"><figure><img src="zara_gruppochiesa.jpg" alt="Noi a Zara" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Noi a Zara</figcaption></figure></div></section>
 
-<!-- 1 TITOLO -->
-<section class="slide active">
-  <p class="label">Classe 3E · Liceo Classico Jacopo Stellini · 2025/26</p>
-  <h1>Il Nostro<br><em>Viaggio del Ricordo</em></h1>
-  <p class="sub">Cosa abbiamo visto, cosa abbiamo sentito, cosa ci portiamo a casa</p>
-  <div class="rule"></div>
-  <div class="meta">
-    <div><strong>Mestre → Zara</strong>itinerario</div>
-    <div><strong>8 tappe</strong>luoghi visitati</div>
-    <div><strong>10 Febbraio</strong>Giorno del Ricordo</div>
-  </div>
-</section>
+<section class="slide mid"><p class="label">Il punto di partenza · Storia dell’arte</p><h2>Zara, una città <em>a strati</em></h2><div class="rule"></div><ul class="pts"><li>Un lavoro di ricerca sulla città di Zara e sulle sue <strong>architetture stratificate nel tempo</strong>, con la prof.ssa di arte e con l’aiuto dell’IA.</li><li>Divisi in gruppi, ognuno ha studiato una fase: l’età romana, l’epoca classica, il periodo veneziano. Poi un prodotto collettivo.</li><li>Abbiamo imparato uno strumento nuovo, <strong>Google My Maps</strong>: da lì è nata la mappa finale con tutte le tappe del viaggio.</li></ul><a class="btn" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener">🗺️ LA MAPPA SU GOOGLE MY MAPS →</a></section>
 
-<!-- 2 PERCHÉ -->
-<section class="slide mid">
-  <p class="label">Il punto di partenza</p>
-  <h2>Non solo pagine<br><em>di un libro</em></h2>
-  <div class="rule"></div>
-  <p>Per decenni la storia dell’esodo giuliano dalmata è rimasta nell’ombra. Noi l’avevamo incontrata sui banchi, tra date e definizioni.</p>
-  <p>Questo viaggio è stato l’occasione per uscire dai libri e <em>vedere con i nostri occhi</em> i luoghi che hanno segnato la vita di moltissime persone.</p>
-</section>
+<section class="slide"><p class="label">Il punto di partenza · Storia</p><h2>Il contesto, <em>prima di partire</em></h2><div class="rule"></div><p class="q">Passato e Presente: «Foibe. Una violenza senza confini»</p><ul class="pts"><li>Con la prof.ssa di storia abbiamo visto in classe il documentario della trasmissione <strong>Passato e Presente</strong>, condotto da Paolo Mieli.</li><li>Con l’intervento dello storico <strong>Raoul Pupo</strong>, esperto del periodo: la base storica su cui si è costruito tutto il viaggio.</li></ul></section>
 
-<!-- STORIA: ESODO -->
-<section class="slide split">
-  <div class="left">
-    <p class="label">Il contesto storico</p>
-    <h2>L’esodo <em>giuliano dalmata</em></h2>
-    <div class="stats"><div>~350.000<span>esuli</span></div><div>1943–’64<span>gli anni dell’esodo</span></div><div>10 Feb<span>Giorno del Ricordo</span></div></div>
-    <p>Dopo la Seconda guerra mondiale il <strong>Trattato di Parigi (1947)</strong> e il <strong>Memorandum di Londra (1954)</strong> assegnarono Istria e Dalmazia alla Jugoslavia di Tito. Lì vivevano da secoli comunità italiane: restare, spesso tra paura e discriminazione, o partire.</p>
-    <p>Tra il 1943 e il 1945 si consumò anche la tragedia delle <strong>foibe</strong>. Dal 2004, con la legge n. 92, il 10 febbraio è il Giorno del Ricordo.</p>
-  </div>
-  <div class="right pics"><figure><img src="Toscana_pola.jpg" alt="La nave Toscana lascia Pola (1947)" onerror="this.parentNode.remove()"><figcaption>La nave Toscana lascia Pola (1947)</figcaption></figure><figure><img src="sansabba_campo-profughi.jpg" alt="Centro profughi di San Sabba (1950)" onerror="this.parentNode.remove()"><figcaption>Centro profughi di San Sabba (1950)</figcaption></figure></div>
-</section>
+<section class="slide mid"><p class="label">Il punto di partenza · Italiano e informatica</p><h2>Dalla storia ai <em>siti HTML</em></h2><div class="rule"></div><ul class="pts"><li>Con la prof.ssa di italiano e un <strong>esperto esterno in collegamento a distanza</strong> abbiamo imparato a progettare siti HTML.</li><li>Cinque gruppi, cinque fasi della storia di Zara. Ogni gruppo ha costruito la propria <strong>linea del tempo</strong> con Copilot e un prompt adeguato.</li></ul><div class="chips"><span>Origini – 1107</span><span>1107 – 1797</span><span>1797 – 1918</span><span>1918 – 1943</span><span>1943 – 1975</span></div><p class="sub" style="margin-top:3vh">Ecco le nostre linee del tempo →</p></section>
 
 <!-- ZARA 0 -->
 <section class="slide mid">
-  <p class="label">Approfondimento storico</p>
+  <p class="label">Il nostro lavoro · Le linee del tempo</p>
   <h2>La storia di <em>Zara</em></h2>
   <div class="rule"></div>
   <p>Zara, oggi <strong>Zadar</strong> in Croazia, fu capoluogo della Dalmazia per quasi un millennio: una città di frontiera plasmata da dominazioni diverse, un vero crocevia di civiltà. La sua storia è inseparabile dall’esodo giuliano dalmata.</p>
@@ -181,119 +203,73 @@ p{font-size:clamp(1rem,1.9vw,1.4rem);line-height:1.7;margin:0 0 1.5vh;max-width:
   <div class="era" style="margin-top:2.5vh"><ul class="tl"><li><b>8 SETTEMBRE 1943</b><span>L’armistizio fa collassare l’ordine militare e amministrativo anche in Dalmazia.</span></li><li><b>NOV. 1943 – 1944</b><span>Oltre 50 incursioni aeree alleate: il centro storico veneziano è quasi interamente distrutto.</span></li><li><b>1944 – 1947</b><span>Con l’occupazione jugoslava circa <strong>20.000 italiani</strong> lasciano Zara, abbandonando case, averi e sepolture. Il 10 febbraio 1947 il Trattato di Parigi assegna la città alla Jugoslavia.</span></li><li><b>1954 – 1975</b><span>Il Memorandum di Londra divide il Territorio Libero di Trieste e provoca nuovi esodi dall’Istria; la questione dei confini si chiude con il <strong>Trattato di Osimo</strong> (1975).</span></li></ul><div class="pics"><figure><img src="zara_bombardata.jpg" alt="Zara dopo i bombardamenti (Riva Nuova)" onerror="this.parentNode.remove()"><figcaption>Zara dopo i bombardamenti (Riva Nuova)</figcaption></figure><figure><img src="zara_crisogono.jpg" alt="San Crisogono e il campanile del Duomo, colpiti dai bombardamenti" onerror="this.parentNode.remove()"><figcaption>San Crisogono e il campanile del Duomo, colpiti dai bombardamenti</figcaption></figure></div></div>
 </section>
 
-<!-- 3 PERCORSO -->
-<section class="slide">
-  <p class="label">Il percorso</p>
-  <h2>Otto tappe, <em>un solo filo</em></h2>
-  <div class="rule"></div>
-  <div class="route">
-    <div class="stop"><b>01 · MESTRE</b><h3>Museo M9</h3><span>Il Novecento come cornice</span></div>
-    <div class="stop"><b>02 · PADRICIANO</b><h3>Centro profughi</h3><span>Dove gli esuli attesero</span></div>
-    <div class="stop"><b>03 · BASOVIZZA</b><h3>La Foiba</h3><span>Il silenzio del monumento</span></div>
-    <div class="stop"><b>04 · TRIESTE</b><h3>Magazzino 26</h3><span>Le cose lasciate indietro</span></div>
-    <div class="stop"><b>05 · FIUME</b><h3>Comunità Italiana</h3><span>Una lingua che resiste</span></div>
-    <div class="stop"><b>06 · FIUME</b><h3>Teatro Italiano</h3><span>Cultura ancora viva</span></div>
-    <div class="stop"><b>07 · ZARA</b><h3>La città simbolo</h3><span>Il cuore del progetto</span></div>
-    <div class="stop"><b>08 · ZARA</b><h3>Visita guidata</h3><span>Tracce veneziane e italiane</span></div>
-  </div>
-  <a class="btn" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:3vh">🗺️ VEDI L’ITINERARIO SULLA MAPPA →</a>
-</section>
 
-<!-- 3b MYMAPS -->
-<section class="slide light">
-  <p class="label">Il progetto Google My Maps</p>
-  <h2>Il viaggio, <em>sulla mappa</em></h2>
-  <div class="rule"></div>
-  <p style="color:#3c3a38">Abbiamo trasformato l’itinerario in una <strong>mappa interattiva</strong>: ogni tappa, da Mestre a Zara, è un punto da esplorare, per seguire il percorso passo dopo passo.</p>
-  <a class="btn mapbtn" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener">🗺️ APRI L’ITINERARIO SU GOOGLE MY MAPS →</a>
-</section>
 
-<!-- 4 FOTO -->
-<section class="slide mid">
-  <p class="label">Dal nostro album</p>
-  <h2>Il viaggio, <em>attraverso i nostri occhi</em></h2>
-  <div class="photos">
-    <figure><img src="mestre_M9.jpeg" alt="Gruppo al museo M9" onerror="this.remove()"><figcaption>Mestre · M9</figcaption></figure>
-    <figure><img src="padriciano_esterno.jpg" alt="Padriciano esterno" onerror="this.remove()"><figcaption>Padriciano</figcaption></figure>
-    <figure><img src="padriciano_interno.jpg" alt="Padriciano interno" onerror="this.remove()"><figcaption>Padriciano · interno</figcaption></figure>
-    <figure><img src="fiume_teatro.jpeg" alt="Teatro di Fiume" onerror="this.remove()"><figcaption>Fiume · Teatro</figcaption></figure>
-    <figure><img src="fiume_centro.jpg" alt="Centro di Fiume" onerror="this.remove()"><figcaption>Fiume · centro</figcaption></figure>
-    <figure><img src="zara_foro.jpg" alt="Foro di Zara" onerror="this.remove()"><figcaption>Zara · Foro</figcaption></figure>
-    <figure><img src="zara_gruppochiesa.jpg" alt="Gruppo a Zara" onerror="this.remove()"><figcaption>Zara · chiesa</figcaption></figure>
-    <figure><img src="zara_gruppofinale.jpeg" alt="Foto finale a Zara" onerror="this.remove()"><figcaption>Zara · foto finale</figcaption></figure>
-  </div>
-</section>
+<section class="slide" id="mappa"><p class="label">Il nostro percorso</p><h2>Tre giorni, <em>un viaggio a ritroso</em></h2><p style="margin:0 0 1vh;font-size:clamp(1rem,1.7vw,1.35rem)">Siamo partiti dal <strong>M9 di Mestre</strong> e abbiamo percorso la storia al contrario: dal recente verso il passato. Clicca un luogo sulla mappa.</p>
+<div class="mapwrap"><div class="days" id="days"></div><div class="mapbox"><div id="map"></div><iframe id="mm" src="" title="Google My Maps" loading="lazy"></iframe><button class="mtog" id="mtog" onclick="toggleMM()">VISTA GOOGLE MY MAPS</button></div></div></section>
 
-<!-- 5 BASOVIZZA -->
-<section class="slide">
-  <p class="label">Il momento che ci ha colpito di più</p>
-  <p class="quote">Il silenzio di quel luogo e l’improvviso innalzarsi del monumento ci hanno emozionato.</p>
-  <div class="rule" style="margin-top:4vh"></div>
-  <p class="sub" style="max-width:40em">Foiba di Basovizza — tra boschi, valli e colline.</p>
-</section>
+<section class="slide split mid" id="m9"><div class="left"><p class="label">Mestre · M9</p><h2>M9 – Museo del ’900</h2><p class="luogo">Museo multimediale sulla storia dell’Italia nel Novecento, nel cuore di Mestre.</p><ul class="pts"><li>Un percorso interattivo che ci ha resi <strong>protagonisti dell’esperienza degli esuli</strong> di oltre settant’anni fa.</li><li>Un laboratorio per esprimere, ognuno a modo proprio, la nostra idea dell’esodo con quanto avevamo studiato.</li><li>La parte espositiva sul Novecento italiano: un’idea complessiva della vita quotidiana e degli eventi dell’epoca.</li></ul><a class="btn" onclick="showOnMap('m9')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n3"><figure><img src="m9_corridoio.jpg" alt="M9 · il percorso espositivo" loading="lazy" onerror="this.parentNode.remove()"><figcaption>M9 · il percorso espositivo</figcaption></figure><figure><img src="m9_schermi.jpg" alt="M9 · installazioni immersive" loading="lazy" onerror="this.parentNode.remove()"><figcaption>M9 · installazioni immersive</figcaption></figure><figure><img src="m9_pola-addio.jpg" alt="M9 · «Pola addio»" loading="lazy" onerror="this.parentNode.remove()"><figcaption>M9 · «Pola addio»</figcaption></figure></div></section>
 
-<!-- 6 ZARA -->
-<section class="slide mid">
-  <p class="label">Zara</p>
-  <h2>Camminare dove<br><em>la storia si legge nei muri</em></h2>
-  <div class="rule"></div>
-  <p>Con la guida e poi in autonomia abbiamo percorso le strade di Zara, che portano ancora i segni del passato veneziano nell’architettura.</p>
-  <p>Una città oggi vivace e croata, dove il passato italiano non è scomparso: si riconosce, se si sa dove guardare.</p>
-</section>
 
-<!-- 7 APPRESO -->
-<section class="slide light">
-  <p class="label">Cosa ci portiamo a casa</p>
-  <h2>Ciò che <em>abbiamo imparato</em></h2>
-  <div class="cols">
-    <div class="card"><h3>Il confine</h3><p>È stato il filo conduttore del viaggio: un confine geografico, ma anche linguistico e identitario.</p></div>
-    <div class="card navy"><h3>La memoria</h3><p>Non riguarda solo il passato. Le comunità degli esuli mantengono viva una cultura, una lingua, un’identità che rischiava di essere dimenticata.</p></div>
-  </div>
-  <p style="margin-top:3vh;color:#3c3a38">Comprendere la loro storia ci aiuta a capire meglio l’Europa di oggi.</p>
-</section>
+<section class="slide split mid" id="padriciano"><div class="left"><p class="label">Trieste · Padriciano</p><h2>Ex Campo Profughi di Padriciano</h2><p class="luogo">Il Centro di raccolta profughi, attivo dal dopoguerra per gli italiani di Istria, Fiume e Dalmazia.</p><ul class="pts"><li>Un vero C.R.P., nell’aspetto più simile a quello che si presentava agli esuli.</li><li>La guida ci ha fatto <strong>ricostruire con l’immaginazione</strong> la vita di chi vi arrivava, tra esposizioni, testimonianze e fonti d’epoca.</li><li>Tra le poche strutture di accoglienza ancora visitabili: per noi <strong>un privilegio</strong>.</li></ul><a class="btn" onclick="showOnMap('padriciano')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n3"><figure><img src="padriciano_gruppo.jpg" alt="Padriciano · all’ingresso" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Padriciano · all’ingresso</figcaption></figure><figure><img src="padriciano_quaderni.jpg" alt="Quaderni e documenti d’epoca" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Quaderni e documenti d’epoca</figcaption></figure><figure><img src="padriciano_foto.jpg" alt="Le foto della vita nel campo" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Le foto della vita nel campo</figcaption></figure></div></section>
 
-<!-- 8 PRODOTTI -->
-<section class="slide mid">
-  <p class="label">La restituzione</p>
-  <h2>Il viaggio <em>continua</em> nei nostri lavori</h2>
-  <div class="prod">
-    <div>
-      <p><strong>🎙️ Il podcast</strong><br>Realizzato per la radio della scuola: un viaggio sonoro tra i luoghi dell’Adriatico orientale, tra storia, memoria e identità.</p>
-      <a class="btn" href="https://open.spotify.com/episode/48pebVp7RInbHYrBwZTeBV?si=kZjmSsNEQbW-smgnMIzItw" target="_blank" rel="noopener">🎧 ASCOLTA SU SPOTIFY</a>
-      <p style="margin-top:3vh"><strong>📰 L’articolo</strong><br>A Fiume siamo finiti sulle pagine de <em>La Voce del Popolo</em>, dopo l’incontro con la Comunità degli Italiani.</p>
-    </div>
-    <div class="news"><img src="vocedelpopolo_primopiano.png" alt="Articolo La Voce del Popolo" onerror="this.parentNode.remove()"></div>
-  </div>
-</section>
 
-<!-- 9 GRAZIE -->
-<section class="slide center">
-  <p class="label">Grazie</p>
-  <h1><em>Ricordare</em><br>per non dimenticare</h1>
-  <div class="rule"></div>
-  <p class="sub">Con gratitudine a tutti coloro che hanno condiviso la propria memoria</p>
-  <p style="margin-top:4vh;font-size:clamp(.85rem,1.4vw,1.05rem);color:rgba(244,237,224,.65)">Classe 3E · coordinata dalla prof.ssa Ada Barbara Pierotti<br>con il contributo della prof.ssa Anna Passerelli</p>
-</section>
+<section class="slide split mid" id="magazzino"><div class="left"><p class="label">Trieste · Porto Vecchio</p><h2>Magazzino 26</h2><p class="luogo">Il deposito che custodisce mobili, oggetti e documenti lasciati dagli esuli.</p><ul class="pts"><li>Un luogo di grande impatto fin dalla soglia: <strong>cataste di valigie, carri, attrezzi, mobili</strong>.</li><li>La prima guida, nipote di esuli, ci ha accolti con un racconto quasi teatrale: spesso chi ha vissuto l’esodo ha taciuto, per il troppo dolore.</li><li>La seconda guida, fuggita ancora giovane, ha poi vissuto oltre dieci anni nel C.R.P. di Padriciano.</li></ul><a class="btn" onclick="showOnMap('magazzino')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n4"><figure><img src="magazzino_sedie.jpg" alt="Sedie accatastate" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Sedie accatastate</figcaption></figure><figure><img src="magazzino_lettere.jpg" alt="Lettere e documenti" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Lettere e documenti</figcaption></figure><figure><img src="magazzino_pianoforte.jpg" alt="Un pianoforte con gli spartiti" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Un pianoforte con gli spartiti</figcaption></figure><figure><img src="magazzino_carte.jpg" alt="Quaderni, libri, disegni" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Quaderni, libri, disegni</figcaption></figure></div></section>
+
+
+<section class="slide split mid" id="basovizza"><div class="left"><p class="label">Trieste · Basovizza</p><h2>Monumento Foiba di Basovizza</h2><p class="luogo">Le foibe sono cavità carsiche: tra il 1943 e il 1945 molte persone vi furono uccise o gettate. Oggi è monumento nazionale.</p><ul class="pts"><li>Una guida semplice e appassionata ci ha condotti in un <strong>percorso storico, etico e della memoria</strong>.</li><li>Ci ha dato un contesto preciso per capire fino in fondo quelle vicende.</li><li>Un’atmosfera <strong>silenziosa e desolata</strong>: solo il vento e il monumento che si alza, imponente, davanti a noi.</li></ul><a class="btn" onclick="showOnMap('basovizza')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n2"><figure><img src="basovizza_ingresso.jpg" alt="Foiba di Basovizza · ingresso" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Foiba di Basovizza · ingresso</figcaption></figure><figure><img src="basovizza_area.jpg" alt="Il sito" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Il sito</figcaption></figure></div></section>
+
+
+<section class="slide split mid" id="fiume-ci"><div class="left"><p class="label">Fiume · Rijeka</p><h2>Comunità degli Italiani di Fiume</h2><p class="luogo">Una delle principali istituzioni della minoranza italiana in Croazia: custodisce lingua, cultura e tradizioni.</p><p class="q">Si percepisce l’Italia anche al di fuori dei suoi confini?</p><ul class="pts"><li>Accolti calorosamente dal presidente <strong>Enea Dessardo</strong> nel salone delle feste del Palazzo Modello.</li><li>Ci ha illustrato il ruolo della Comunità, le sue iniziative e la storia di Fiume.</li><li>Ci ha mostrato <strong>La Voce del Popolo</strong>, l’unico quotidiano in italiano all’estero, con un articolo sulla nostra visita.</li></ul><a class="btn" onclick="showOnMap('fiume-ci')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n2"><figure><img src="fiume_palazzo.jpg" alt="Fiume · il Palazzo" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Fiume · il Palazzo</figcaption></figure><figure><img src="vocedelpopolo_primopiano.png" alt="La Voce del Popolo" loading="lazy" onerror="this.parentNode.remove()"><figcaption>La Voce del Popolo</figcaption></figure></div></section>
+
+
+<section class="slide split mid" id="teatro"><div class="left"><p class="label">Fiume · Rijeka</p><h2>Teatro Nazionale Croato Ivan de Zajc</h2><p class="luogo">Inaugurato nel 1885 in epoca austro-ungarica: specchio della storia plurale della città.</p><ul class="pts"><li>La guida ci ha ricevuti fuori, per mostrarci la <strong>multiculturalità</strong> riflessa negli edifici intorno.</li><li>Dentro, lungo le scale, ci ha raccontato la storia di Fiume con riferimenti all’esodo, collegandosi al nostro percorso.</li><li>Abbiamo visto anche il <strong>dietro le quinte</strong> e l’allestimento del palco, tra architetture e soffitti dipinti.</li></ul><a class="btn" onclick="showOnMap('teatro')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n3"><figure><img src="fiume_teatro.jpeg" alt="Il Teatro" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Il Teatro</figcaption></figure><figure><img src="fiume_corso.jpg" alt="Il corso di Fiume" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Il corso di Fiume</figcaption></figure><figure><img src="fiume_torre.jpg" alt="La Torre civica" loading="lazy" onerror="this.parentNode.remove()"><figcaption>La Torre civica</figcaption></figure></div></section>
+
+
+<section class="slide split mid" id="zara"><div class="left"><p class="label">Zara · Zadar</p><h2>Zara</h2><p class="luogo">Oltre tremila anni di storia nelle architetture e nel paesaggio urbano affacciato sull’Adriatico.</p><ul class="pts"><li>Con la guida nel centro storico: sul lungomare l’<strong>Organo Marino</strong> e il <strong>Saluto al Sole</strong>, poi San Donato, il Foro e Sant’Anastasia.</li><li>La città porta i segni del Novecento: i bombardamenti e l’esodo ne hanno trasformato l’identità.</li><li>Da qui l’esodo ha avuto inizio, nel 1944: <strong>Zara fu la prima città abbandonata</strong>.</li></ul><a class="btn" onclick="showOnMap('zara')">📍 VEDI SULLA MAPPA</a></div><div class="right gal n3"><figure><img src="zara_porta.jpg" alt="Porta Terraferma, con il leone di San Marco" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Porta Terraferma, con il leone di San Marco</figcaption></figure><figure><img src="zara_rosone.jpg" alt="Cattedrale di Sant’Anastasia" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Cattedrale di Sant’Anastasia</figcaption></figure><figure><img src="zara_gruppochiesa.jpg" alt="Noi a Zara" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Noi a Zara</figcaption></figure></div></section>
+
+
+<section class="slide light"><p class="label">La restituzione</p><h2>I nostri <em>lavori</em></h2><div class="work"><div class="card"><h3>🎙️ Il podcast</h3><p>Realizzato per la radio della scuola: un viaggio sonoro tra storia, memoria e identità.</p><a href="https://open.spotify.com/episode/48pebVp7RInbHYrBwZTeBV?si=kZjmSsNEQbW-smgnMIzItw" target="_blank" rel="noopener">ASCOLTA SU SPOTIFY →</a></div><div class="card navy"><h3>📰 Il giornale</h3><p>A Fiume siamo finiti sulle pagine de <em>La Voce del Popolo</em>, dopo l’incontro con la Comunità degli Italiani.</p></div><div class="card"><h3>🖥️ Sito e mappa</h3><p>La nostra restituzione: questo percorso, le linee del tempo di Zara e la mappa interattiva del viaggio.</p><a href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener">APRI GOOGLE MY MAPS →</a></div></div></section>
+
+<section class="slide split"><div class="left"><p class="label">Grazie</p><h1><em>Ricordare</em><br>per non dimenticare</h1><div class="rule"></div><p class="sub">Con gratitudine a tutti coloro che hanno condiviso la propria memoria</p><p style="margin-top:3vh;font-size:clamp(.9rem,1.5vw,1.15rem);color:rgba(244,237,224,.7)">Classe 3E · coordinata dalla prof.ssa Ada Barbara Pierotti<br>con il contributo della prof.ssa Anna Passerelli</p></div><div class="right gal n1"><figure><img src="zara_gruppofinale.jpeg" alt="Zara · 25 marzo 2026" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Zara · 25 marzo 2026</figcaption></figure></div></section>
 </main>
-
 <div class="nav"><button id="prev" aria-label="Indietro">←</button><span id="count"></span><button id="next" aria-label="Avanti">→</button></div>
-
 <script>
-const slides=[...document.querySelectorAll('.slide')];let i=0;
-function go(n){i=Math.max(0,Math.min(slides.length-1,n));
- slides.forEach((s,k)=>s.classList.toggle('active',k===i));
- document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
- document.getElementById('count').textContent=(i+1)+' / '+slides.length;
- history.replaceState(null,'','#'+(i+1));}
-document.getElementById('next').onclick=()=>go(i+1);
-document.getElementById('prev').onclick=()=>go(i-1);
-document.addEventListener('keydown',e=>{
- if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(i+1)}
+const MD={"stops":[["M9 - Museo del '900",45.4917,12.24105,"Giorno 1"],["Ex Campo Profughi di Padriciano (C.R.P.)",45.65543,13.84503,"Giorno 1"],["Monumento Foiba di Basovizza",45.63429,13.8641,"Giorno 1"],["Magazzino 26",45.66529,13.76237,"Giorno 2"],["Comunità degli Italiani di Fiume-Rijeka",45.32541,14.44377,"Giorno 2"],["Teatro Nazionale Croato Ivan de Zajc",45.32433,14.44472,"Giorno 2"],["Zara",44.11937,15.23136,"Giorno 3"],["Il Saluto al Sole",44.11759,15.21982,"Giorno 3"],["Organo Marino",44.11722,15.21991,"Giorno 3"],["Foro Romano",44.11532,15.22387,"Giorno 3"],["Chiesa di San Donato",44.11584,15.22437,"Giorno 3"],["Cattedrale di Sant'Anastasia",44.11637,15.22427,"Giorno 3"],["Narodni trg",44.11427,15.22784,"Giorno 3"],["Piazza dei Cinque Pozzi",44.11249,15.22893,"Giorno 3"],["Parco della Regina Jelena Madijevka",44.11226,15.22957,"Giorno 3"]],"route":[[45.4916,12.2413],[45.4915,12.2383],[45.492,12.2359],[45.4917,12.2294],[45.4903,12.2249],[45.4885,12.2235],[45.486,12.2202],[45.4883,12.2209],[45.492,12.2233],[45.4976,12.2299],[45.5031,12.2323],[45.5107,12.2373],[45.5189,12.251],[45.5292,12.2677],[45.5534,12.3106],[45.5733,12.3436],[45.5936,12.3753],[45.6184,12.4191],[45.6416,12.466],[45.6674,12.5227],[45.6894,12.5693],[45.7121,12.6219],[45.7237,12.6423],[45.7311,12.6623],[45.7451,12.7063],[45.7557,12.734],[45.778,12.7723],[45.7861,12.7937],[45.7957,12.8369],[45.8007,12.862],[45.8049,12.9073],[45.8093,12.9647],[45.8147,12.9942],[45.8186,13.0302],[45.8315,13.1035],[45.8642,13.2101],[45.8881,13.2712],[45.8959,13.2863],[45.893,13.3057],[45.8693,13.4015],[45.8567,13.4321],[45.8516,13.4608],[45.8422,13.4859],[45.843,13.4991],[45.8379,13.5115],[45.8275,13.5215],[45.8193,13.5343],[45.8157,13.547],[45.8148,13.5579],[45.8111,13.5625],[45.8086,13.5714],[45.8056,13.577],[45.8008,13.5823],[45.7908,13.5908],[45.7811,13.5988],[45.7762,13.6121],[45.7743,13.6351],[45.7708,13.6442],[45.7622,13.6626],[45.7556,13.6738],[45.7428,13.6912],[45.7124,13.7379],[45.7016,13.7579],[45.7005,13.7764],[45.7013,13.7997],[45.6822,13.8149],[45.6677,13.8246],[45.6593,13.8309],[45.6564,13.8299],[45.6561,13.8305],[45.6596,13.8336],[45.6581,13.839],[45.6553,13.8446],[45.6492,13.8506],[45.6444,13.8627],[45.6403,13.8636],[45.6363,13.8636],[45.6322,13.8656],[45.6291,13.8679],[45.6282,13.8718],[45.6281,13.8763],[45.63,13.878],[45.633,13.875],[45.6358,13.8716],[45.639,13.8674],[45.6383,13.8486],[45.6369,13.8439],[45.6353,13.8439],[45.6358,13.8425],[45.6383,13.8359],[45.646,13.8259],[45.6491,13.8224],[45.6515,13.8193],[45.6579,13.8139],[45.6594,13.8115],[45.6615,13.8072],[45.6633,13.8035],[45.6628,13.8006],[45.6583,13.7949],[45.6596,13.793],[45.6609,13.7927],[45.6604,13.7915],[45.6565,13.7881],[45.6551,13.7753],[45.661,13.7707],[45.6671,13.7623],[45.6693,13.7596],[45.6694,13.7592],[45.6663,13.7609],[45.6665,13.7621],[45.6691,13.7598],[45.6658,13.7634],[45.6644,13.7706],[45.6643,13.7728],[45.6619,13.7732],[45.6636,13.776],[45.6641,13.7804],[45.6651,13.7867],[45.6673,13.7874],[45.6678,13.7904],[45.6673,13.7908],[45.6682,13.7933],[45.6683,13.7982],[45.6655,13.8021],[45.6659,13.8045],[45.6629,13.8063],[45.6583,13.8136],[45.6553,13.8153],[45.6498,13.8212],[45.6479,13.824],[45.6431,13.8294],[45.6362,13.8388],[45.6353,13.8432],[45.6359,13.8438],[45.6373,13.8445],[45.6394,13.8534],[45.6378,13.8706],[45.6352,13.8812],[45.63,13.8921],[45.6266,13.8987],[45.623,13.9027],[45.6165,13.9136],[45.6121,13.9156],[45.6103,13.923],[45.6088,13.9319],[45.6088,13.9335],[45.6094,13.9367],[45.6091,13.938],[45.6065,13.9444],[45.6043,13.9515],[45.5967,13.966],[45.5907,13.9795],[45.5831,13.9903],[45.5782,14.0014],[45.5711,14.014],[45.5646,14.0277],[45.5594,14.0347],[45.559,14.0352],[45.5552,14.046],[45.5516,14.0578],[45.5507,14.0589],[45.5474,14.0726],[45.5427,14.0846],[45.5395,14.0942],[45.539,14.1082],[45.5354,14.1165],[45.5304,14.1258],[45.5278,14.13],[45.5224,14.141],[45.521,14.148],[45.5192,14.152],[45.5119,14.1627],[45.5048,14.1688],[45.5035,14.176],[45.5006,14.183],[45.4951,14.1949],[45.4912,14.2055],[45.4936,14.2102],[45.4919,14.2155],[45.4894,14.2248],[45.4841,14.2322],[45.4857,14.2352],[45.4836,14.2381],[45.4804,14.2412],[45.4838,14.2464],[45.483,14.249],[45.4806,14.2538],[45.4759,14.2715],[45.4729,14.2737],[45.4681,14.2722],[45.4521,14.2706],[45.4361,14.2795],[45.4258,14.2965],[45.4109,14.2994],[45.3976,14.3009],[45.3864,14.3015],[45.3782,14.3157],[45.3733,14.3225],[45.3641,14.3333],[45.3535,14.357],[45.3485,14.3666],[45.3471,14.3893],[45.343,14.4102],[45.345,14.4213],[45.3437,14.4211],[45.3435,14.4208],[45.34,14.4242],[45.3377,14.411],[45.3373,14.4105],[45.3365,14.4156],[45.3307,14.4295],[45.3278,14.4367],[45.3254,14.446],[45.3252,14.4448],[45.3253,14.4495],[45.3295,14.4519],[45.3332,14.4533],[45.333,14.4562],[45.3356,14.4625],[45.3365,14.4663],[45.3391,14.4709],[45.3435,14.466],[45.3494,14.4715],[45.3462,14.491],[45.3575,14.4938],[45.368,14.4894],[45.3758,14.492],[45.3765,14.5163],[45.3768,14.5333],[45.3695,14.546],[45.3638,14.5516],[45.3614,14.5572],[45.3616,14.5719],[45.354,14.5813],[45.3496,14.5887],[45.3452,14.5935],[45.3389,14.594],[45.3306,14.601],[45.3263,14.6199],[45.3214,14.6336],[45.3254,14.6568],[45.318,14.6773],[45.316,14.7038],[45.3211,14.7314],[45.3278,14.7392],[45.3328,14.7383],[45.3404,14.7455],[45.3509,14.7591],[45.3633,14.7682],[45.3713,14.7853],[45.3801,14.7995],[45.3916,14.8141],[45.3935,14.8241],[45.3902,14.8323],[45.3822,14.8442],[45.3822,14.8647],[45.3837,14.8848],[45.3863,14.8974],[45.3837,14.9215],[45.3806,14.9475],[45.3749,14.9748],[45.3733,14.9909],[45.3743,15.0227],[45.3764,15.0406],[45.3723,15.0572],[45.3613,15.0615],[45.3587,15.0734],[45.3673,15.0919],[45.3732,15.0991],[45.3724,15.1132],[45.3755,15.1241],[45.3797,15.1575],[45.3854,15.175],[45.3869,15.1936],[45.3966,15.2075],[45.4007,15.2325],[45.4044,15.2478],[45.3997,15.2521],[45.3894,15.2589],[45.3743,15.2693],[45.3576,15.2767],[45.3417,15.2748],[45.3256,15.281],[45.3118,15.2811],[45.2969,15.2775],[45.2827,15.2757],[45.2694,15.2693],[45.2556,15.2766],[45.2397,15.2684],[45.2217,15.2602],[45.209,15.2614],[45.1964,15.2649],[45.184,15.2699],[45.1752,15.278],[45.1628,15.2736],[45.1499,15.2734],[45.1404,15.268],[45.132,15.251],[45.1231,15.2435],[45.1132,15.2463],[45.096,15.2273],[45.0817,15.2097],[45.0753,15.2056],[45.0641,15.2077],[45.0532,15.1946],[45.0481,15.1792],[45.0346,15.1727],[45.0218,15.1541],[45.0104,15.1345],[45.0003,15.1154],[44.9897,15.0963],[44.9782,15.0934],[44.9674,15.0919],[44.9569,15.1194],[44.9487,15.1507],[44.9416,15.1663],[44.9319,15.1714],[44.9205,15.1676],[44.9086,15.1762],[44.8978,15.1845],[44.8886,15.1943],[44.8766,15.2055],[44.8668,15.2079],[44.8544,15.2245],[44.8411,15.2447],[44.8294,15.2604],[44.821,15.2676],[44.8122,15.2946],[44.8011,15.3074],[44.7936,15.3226],[44.7871,15.3345],[44.7755,15.3444],[44.7611,15.3587],[44.7511,15.3743],[44.7344,15.3812],[44.7157,15.3868],[44.6964,15.3994],[44.682,15.4084],[44.663,15.4243],[44.6476,15.4344],[44.6324,15.4397],[44.6138,15.4395],[44.5982,15.4383],[44.5787,15.4282],[44.5569,15.4296],[44.5241,15.4581],[44.5143,15.5045],[44.4982,15.5343],[44.4751,15.5797],[44.4605,15.6043],[44.4329,15.6275],[44.4029,15.6371],[44.392,15.6293],[44.3849,15.63],[44.3832,15.6386],[44.377,15.6537],[44.371,15.6714],[44.3551,15.7014],[44.35,15.7123],[44.3378,15.7434],[44.3315,15.7508],[44.3263,15.7594],[44.3219,15.7654],[44.3198,15.7835],[44.3157,15.797],[44.3044,15.816],[44.3002,15.8265],[44.2961,15.8365],[44.2885,15.8292],[44.2822,15.823],[44.2726,15.8152],[44.2646,15.8127],[44.2593,15.8123],[44.2519,15.8075],[44.2468,15.8103],[44.2434,15.8108],[44.2403,15.8162],[44.2362,15.8167],[44.2346,15.8078],[44.2322,15.8068],[44.2315,15.8023],[44.2308,15.7965],[44.2285,15.7928],[44.2265,15.7874],[44.2267,15.78],[44.2245,15.7708],[44.2241,15.7628],[44.2243,15.7592],[44.2229,15.7557],[44.2225,15.7486],[44.224,15.7399],[44.2229,15.7352],[44.2219,15.7294],[44.2223,15.7256],[44.221,15.7231],[44.2211,15.7117],[44.2195,15.7044],[44.2169,15.6988],[44.2174,15.6942],[44.2146,15.6903],[44.2119,15.694],[44.2088,15.6917],[44.2051,15.6958],[44.2024,15.6974],[44.2002,15.6947],[44.2002,15.6905],[44.1996,15.6864],[44.201,15.6836],[44.198,15.6869],[44.1979,15.6851],[44.1984,15.6814],[44.1983,15.6812],[44.1983,15.6784],[44.1965,15.6811],[44.1942,15.6783],[44.196,15.6694],[44.1965,15.6518],[44.1875,15.637],[44.1823,15.6226],[44.18,15.6174],[44.1766,15.6166],[44.1687,15.625],[44.161,15.6259],[44.1501,15.6326],[44.1395,15.6382],[44.1303,15.6355],[44.1245,15.6315],[44.1211,15.6244],[44.1244,15.6191],[44.1253,15.6113],[44.1318,15.5896],[44.1321,15.5889],[44.1305,15.5559],[44.1212,15.4721],[44.1135,15.405],[44.1124,15.3952],[44.1098,15.3983],[44.0924,15.3661],[44.0846,15.3553],[44.0724,15.3428],[44.0717,15.3348],[44.0855,15.3208],[44.094,15.3033],[44.098,15.2872],[44.0954,15.2803],[44.098,15.2733],[44.1009,15.2703],[44.1035,15.2622],[44.1053,15.2555],[44.108,15.2465],[44.1114,15.2377],[44.1147,15.2362],[44.1194,15.2314]]};
+const slides=[...document.querySelectorAll('.slide')];let i=0,map=null,mm=false;
+const DAYCOL={'Giorno 1':'#c9a84c','Giorno 2':'#e07a5f','Giorno 3':'#81b29a'};
+const SID={"M9 - Museo del '900":'m9','Ex Campo Profughi di Padriciano (C.R.P.)':'padriciano','Monumento Foiba di Basovizza':'basovizza','Magazzino 26':'magazzino','Comunità degli Italiani di Fiume-Rijeka':'fiume-ci','Teatro Nazionale Croato Ivan de Zajc':'teatro','Zara':'zara'};
+const DAYS={'Giorno 1':'GIORNO 1 · 23 MARZO','Giorno 2':'GIORNO 2 · 24 MARZO','Giorno 3':'GIORNO 3 · 25 MARZO'};
+function idx(id){return slides.findIndex(s=>s.id===id)}
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+ document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';document.getElementById('count').textContent=(i+1)+' / '+slides.length;
+ history.replaceState(null,'','#'+(i+1));if(slides[i].id==='mappa')setTimeout(initMap,520)}
+function initMap(){
+ if(map){map.invalidateSize();return}
+ if(typeof L==='undefined'){toggleMM(true);return}
+ map=L.map('map',{keyboard:false,scrollWheelZoom:false}).setView([45.0,14.2],7);
+ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap · © CARTO',maxZoom:18}).addTo(map);
+ L.polyline(MD.route,{color:'#c9a84c',weight:3,opacity:.85,dashArray:'6 6'}).addTo(map);
+ const pts=[];MD.stops.forEach(s=>{const sid=SID[s[0]],main=!!sid,c=DAYCOL[s[3]];
+  const m=L.circleMarker([s[1],s[2]],{radius:main?10:6,color:'#1a2744',weight:2,fillColor:c,fillOpacity:1}).addTo(map);
+  m.bindPopup('<strong>'+s[0]+'</strong>'+(main?'<br><a onclick="go(idx(\''+sid+'\'))">VAI ALLA TAPPA →</a>':''));if(main)pts.push([s[1],s[2]])});
+ map.fitBounds(MD.route,{padding:[30,30]});map._pts=pts;
+}
+function focusStop(name){initMap();if(!map)return;const s=MD.stops.find(x=>x[0]===name);if(!s)return;map.flyTo([s[1],s[2]],name==='Zara'?15:14,{duration:1.2});
+ map.eachLayer(l=>{if(l.getLatLng&&Math.abs(l.getLatLng().lat-s[1])<1e-5)setTimeout(()=>l.openPopup(),1300)})}
+function showOnMap(id){const n=Object.keys(SID).find(k=>SID[k]===id);go(idx('mappa'));setTimeout(()=>focusStop(n),650)}
+function toggleMM(force){mm=force===true?true:!mm;const f=document.getElementById('mm');if(mm&&!f.src.includes('embed'))f.src='https://www.google.com/maps/d/embed?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it';
+ f.style.display=mm?'block':'none';document.getElementById('map').style.display=mm?'none':'block';document.getElementById('mtog').textContent=mm?'VISTA MAPPA INTERATTIVA':'VISTA GOOGLE MY MAPS'}
+// elenco tappe per giorno
+(function(){const d=document.getElementById('days');let h='',cur='';MD.stops.forEach(s=>{const sid=SID[s[0]];if(!sid)return;if(s[3]!==cur){cur=s[3];h+='<h4>'+DAYS[cur]+'</h4>'}
+ h+='<a class="d'+cur.slice(-1)+'" onclick="focusStop(\''+s[0].replace(/'/g,"\\'")+'\')">'+s[0].replace(' - ',' – ').replace(' (C.R.P.)','').replace('Monumento ','').replace('Nazionale Croato Ivan de Zajc','Ivan de Zajc')+'</a>'});
+ d.innerHTML=h+'<h4 style="margin-top:2vh"><a style="border:0;background:none;padding:0;color:var(--gold-lt);font-family:var(--ui);font-size:.8rem;letter-spacing:.1em" href="https://www.google.com/maps/d/u/0/viewer?mid=1TS3rxI-8FerPTP5N5R319BQOAFjOspE&hl=it&ll=1.2722218725854067e-14%2C0&z=17" target="_blank" rel="noopener">APRI SU GOOGLE MY MAPS →</a></h4>'})();
+document.getElementById('next').onclick=()=>go(i+1);document.getElementById('prev').onclick=()=>go(i-1);
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(i+1)}
  if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1)}
  if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1);
- if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();});
-let x0=null;
-document.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+ if(e.key==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()});
+let x0=null;document.addEventListener('touchstart',e=>{x0=e.target.closest('.mapbox')?null:e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(i+(d<0?1:-1));x0=null});
 go(parseInt(location.hash.slice(1))-1||0);
 </script>
